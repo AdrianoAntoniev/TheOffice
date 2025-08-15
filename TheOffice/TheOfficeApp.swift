@@ -1,14 +1,14 @@
 //
-//  TheOfficeApp.swift
-//  TheOffice
+//  HelloWorldApp.swift
+//  HelloWorld
 //
-//  Created by Adriano Rodrigues Vieira on 15/08/25.
+//  Created by Adriano Rodrigues Vieira on 02/08/25.
 //
 
 import SwiftUI
 
 @main
-struct TheOfficeApp: App {
+struct HelloWorldApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
