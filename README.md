@@ -4,5 +4,5 @@ SwiftUI app with some random stuff about **The Office** - best paper company loc
 
 Some features:
 - API Caching using `NSCache`;
-- Use of [The Office](https://theofficeapi.dev/) API;
+- Use of [The Office](https://theofficeapi.dev/) API.
 
