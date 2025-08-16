@@ -6,3 +6,6 @@ Some features:
 - API Caching using `NSCache`;
 - Use of [The Office](https://theofficeapi.dev/) API.
 
+### Dependencies
+[Networkingo](https://github.com/AdrianoAntoniev/Networkingo)
+
