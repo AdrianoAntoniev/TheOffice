@@ -1,0 +1,16 @@
+PODS:
+  - Networkingo (0.1.0)
+
+DEPENDENCIES:
+  - Networkingo (from `../Networkingo`)
+
+EXTERNAL SOURCES:
+  Networkingo:
+    :path: "../Networkingo"
+
+SPEC CHECKSUMS:
+  Networkingo: 7aa1a8dac90d11bcefdef4406a76d7b8d0de779b
+
+PODFILE CHECKSUM: 6d4a958cc60b8dcda932567ba362b8055bf4310a
+
+COCOAPODS: 1.16.2

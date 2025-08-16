@@ -1,0 +1,6 @@
+framework module Networkingo {
+  umbrella header "Networkingo-umbrella.h"
+
+  export *
+  module * { export * }
+}

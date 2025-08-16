@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Networkingo
 
 struct CacheManager {
     private static let cache: NSCache<NSString, NSData> = .init()

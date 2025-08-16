@@ -1,0 +1,22 @@
+{
+  "name": "Networkingo",
+  "version": "0.1.0",
+  "summary": "Library to handle networking with fun.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Adriano Rodrigues Vieira/Networkingo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Adriano Rodrigues Vieira": "adriano.antoniev@outlook.com"
+  },
+  "source": {
+    "git": "https://github.com/Adriano Rodrigues Vieira/Networkingo.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "Networkingo/Classes/**/*"
+}

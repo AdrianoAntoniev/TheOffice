@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Networkingo
 
 final class NetworkManager: Repository<Endpoint> {
     func fetchSeasons(completion: @escaping ResultHandler<[Season]>) {

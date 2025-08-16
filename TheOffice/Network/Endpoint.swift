@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import Networkingo
 
 enum Endpoint: RawRequest {
     case getSeasons
     case getCharacters(includeEpisodes: Bool, limit: Int?)
     case getCharacter(byId: Int, includeEpisodes: Bool)
 
-    var method: Method {
+    var method: Networkingo.Method {
         switch self {
         case .getSeasons:
             return .get
