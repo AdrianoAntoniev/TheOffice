@@ -8,35 +8,38 @@
 import SwiftUI
 
 struct CharacterView: View {
-    @State private var character: CharacterDetailViewModel?
-    let characterId: Int
-
+    //    @State private var character: CharacterDetailViewModel?
+    @State private var loaderProgress = 0.0
+    
+    @ObservedObject var useCase: CharacterUseCase
+    
+    init(characterId: Int) {
+        useCase = CharacterUseCase(characterId: characterId)
+    }
+    
+    
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack(alignment: .leading, spacing: 10) {
-                if let name = character?.name { Text(name) }
-                Spacer()
-                if let actor = character?.actor { Text(actor) }
-                if let episodesData = character?.episodesData { Text(episodesData) }
-                
-                if let jobs = character?.occupations { Text(jobs) }
-            }
-        }.padding(.all, 12)
-        .onAppear {
-            NetworkManager().fetchCharacter(byId: characterId) { result in
-                switch result {
+                switch useCase.state {
+                case .idle:
+                    Text("")
+                case .loading:
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .gray))
+                case .failed(let error):
+                    Text("Erro: \(error.localizedDescription)")
                 case .success(let data):
-                    character = CharacterDetailViewModel(detail: data)
-                case .failure(let error):
-                    print("error")
+                    let vm = CharacterDetailViewModel(detail: data)
+                    
+                    if let name = vm.name { Text(name) }
+                    Spacer()
+                    if let actor = vm.actor { Text(actor) }
+                    if let episodesData = vm.episodesData { Text(episodesData) }
+                    
+                    if let jobs = vm.occupations { Text(jobs) }
                 }
             }
-        }
-
-    }
+        }.padding(.all, 12)
+    }    
 }
-
-//#Preview {
-//    CharacterView(characterId: 0)
-//}
-//
